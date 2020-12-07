@@ -22,5 +22,5 @@ class Creat_view(CreateView):
     fields = ['title', 'text','img']
 
     def form_valid(self,form):
-        form.instance.post_author = self.request.user
+        form.instance.author = self.request.user
         return super().form_valid(form)
